@@ -14,8 +14,8 @@ class PostIndex extends Layout
         }
 
         $html = '<h1>All Posts</h1>';
-        $html .= '<p>Total posts:' . $context->content . '</p>';
-        $html .= '<ul>';
+        $html .= '<div class="total-posts">Total posts:' . $context->content . '</div>';
+        $html .= '<ul class="post-list">';
         // Loop each post
         foreach ($context->posts as $post) {
             $title = htmlspecialchars($post->title, ENT_QUOTES, 'UTF-8');
@@ -24,7 +24,8 @@ class PostIndex extends Layout
 
             $html .= <<<HTML
                     <li>
-                        <a href="/posts/{$id}">{$title}</a> — by: <em>{$author}</em>
+                        <a href="/posts/{$id}">{$title}</a>
+                        <div class="author">by {$author}</div>
                     </li>
                 HTML;
         }

@@ -153,3 +153,43 @@ main {
 .btn.btn--primary:hover {
   background-color: #333333;
 }
+
+/* Posts */
+
+h1 {
+  color: #444;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.post-list li {
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+.post-list a {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #444;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+.author {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.total-posts {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #555;
+}
