@@ -34,6 +34,16 @@ class Checkout extends Layout
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="beta-program">
+                                <label>
+                                    <input type="checkbox" name="beta_opt_in" value="1" />
+                                    <span>
+                                        With our “Rise &amp; Shine” beta program, you get early access to new
+                                        features, but they may not always work perfectly. You can change your beta
+                                        preference at any time after you join.
+                                    </span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="frame">

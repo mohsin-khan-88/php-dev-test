@@ -111,3 +111,15 @@ main {
   border-bottom: 1px solid #eee;
   padding: 0.5rem;
 }
+
+/* checkout */
+
+.beta-program {
+    margin-top: 1em;
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+.beta-program input {
+    margin-right: 0.5em;
+}
