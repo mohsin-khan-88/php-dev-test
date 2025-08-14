@@ -21,7 +21,7 @@ class Checkout extends Layout
                             <table class="order-summary">
                                 <thead>
                                     <tr>
-                                        <th></th>
+                                        <th>Product</th>
                                         <th>Item</th>
                                         <th>Quantity</th>
                                     </tr>
