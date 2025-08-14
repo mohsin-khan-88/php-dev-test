@@ -117,6 +117,9 @@ class Checkout extends Layout
                             </div>
                         </div>
                     </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Place Order</button>
+                    </div>
                 </form>
             HTML;
     }
