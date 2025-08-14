@@ -123,3 +123,9 @@ main {
 .beta-program input {
     margin-right: 0.5em;
 }
+
+.product-image {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
