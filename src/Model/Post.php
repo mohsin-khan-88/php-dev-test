@@ -43,5 +43,27 @@ class Post
         return array_map(fn($row) => new Post($row), $rows);
     }
 
+    // Fetch a single post by ID
+    public static function getById($db, string $id): ?Post
+    {
+        $stmt = $db->prepare("
+            SELECT 
+                posts.id,
+                posts.title,
+                posts.body,
+                posts.created_at,
+                posts.modified_at,
+                authors.full_name AS author
+            FROM posts
+            INNER JOIN authors ON posts.author = authors.id
+            WHERE posts.id = :id
+            LIMIT 1
+        ");
+        // Execute the statement with the provided ID
+        $stmt->execute([':id' => $id]);
+        $row = $stmt->fetch($db::FETCH_ASSOC);
+
+        return $row ? new Post($row) : null;
+    }
 
 }

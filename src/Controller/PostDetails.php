@@ -6,6 +6,8 @@ use silverorange\DevTest\Context;
 use silverorange\DevTest\Template;
 use silverorange\DevTest\Model;
 
+// use silverorange\DevTest\Model\Post;
+
 class PostDetails extends Controller
 {
     /**
@@ -25,7 +27,7 @@ class PostDetails extends Controller
             $context->content = "A post with id {$this->params[0]} was not found.";
         } else {
             $context->title = $this->post->title;
-            $context->content = $this->params[0];
+            $context->post = $this->post;
         }
 
         return $context;
@@ -51,7 +53,6 @@ class PostDetails extends Controller
 
     protected function loadData(): void
     {
-        // TODO: Load post from database here. $this->params[0] is the post id.
-        $this->post = null;
+        $this->post = Model\Post::getById($this->db, $this->params[0]);
     }
 }

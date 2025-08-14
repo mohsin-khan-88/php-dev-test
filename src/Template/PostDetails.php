@@ -3,13 +3,25 @@
 namespace silverorange\DevTest\Template;
 
 use silverorange\DevTest\Context;
+use Parsedown;
 
 class PostDetails extends Layout
 {
     protected function renderPage(Context $context): string
     {
+
+        // Convert Markdown to HTML
+        $parsedown = new Parsedown();
+        $parsedBody = $parsedown->text($context->post->body);
+
         return <<<HTML
-            <p>SHOW CONTENT FOR {$context->content} HERE</p>
+                <article>
+                    <h1>{$context->post->title}</h1>
+                    <p><em>By {$context->post->author}</em></p>
+                    <div>{$parsedBody}</div>
+                    <p>
+                </p>
+                </article>
             HTML;
     }
 }
