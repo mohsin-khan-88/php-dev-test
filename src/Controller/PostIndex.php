@@ -18,6 +18,7 @@ class PostIndex extends Controller
         $context = new Context();
         $context->title = 'Posts';
         $context->content = strval(count($this->posts));
+        $context->posts = $this->posts;
         return $context;
     }
 
@@ -28,7 +29,7 @@ class PostIndex extends Controller
 
     protected function loadData(): void
     {
-        // TODO: Load posts from database here.
-        $this->posts = [];
+        // Fetch all posts
+        $this->posts = Post::getAll($this->db);
     }
 }
