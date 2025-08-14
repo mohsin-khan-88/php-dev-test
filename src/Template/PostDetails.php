@@ -19,8 +19,9 @@ class PostDetails extends Layout
                     <h1>{$context->post->title}</h1>
                     <p><em>By {$context->post->author}</em></p>
                     <div>{$parsedBody}</div>
-                    <p>
-                </p>
+                    <p><a href="/posts" class="btn btn--primary">
+                    &larr; Back to Posts
+                    </a></p>
                 </article>
             HTML;
     }
