@@ -165,7 +165,7 @@ database.
 The DSN string in `src/Config.php` may need to be modified if you use a
 different database or do not use PostgreSQL with Docker Compose.
 
-You can import data for post by running:
+You can import data for posts by running:
 
 ```sh
 php scripts/import-posts.php
